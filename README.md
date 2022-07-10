@@ -4,6 +4,7 @@ The program although not yet complete will be able to keep track of the users da
 
 ## Collaborators
 
+- [@aryanntated](https://github.com/aryanntated)
 - [@bhuvighosh3](https://github.com/bhuvighosh3)
 - [@HiyaJain22](https://github.com/HiyaJain22)
 - [@yashyaks](https://github.com/yashyaks)
