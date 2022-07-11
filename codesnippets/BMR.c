@@ -1,28 +1,37 @@
 #include <stdio.h>
 int main()
 {
-    int h,w,a,bmr;    //height=h weight=w age=a gender=g
+    float h,w,BMR;    //height=h weight=w age=a gender=g
+    int a;
     char g;
-    printf("Enter height in inches:");
-    scanf("%d",&h);
+    int bmr(float,float,int,char);
+    printf("Enter height in meter:");
+    scanf("%f",&h);
     printf("Enter weight in lbs:");
-    scanf("%d",&w);
+    scanf("%f",&w);
     printf("Enter age in yrs:");
-    scanf("%d",&a);
+    scanf("%f",&a);
     printf("Enter gender M/F:");
-    scanf("%c %c",&g,&g);
+     _flushall();
+    scanf("%c",&g);
+    BMR=bmr(h,w,a,g);
+    printf("BMR=%f",BMR);
+    return 0;
+}
+int bmr(float h,float w,int a,char g)
+{
+    float bmr;
     if ((g=='F')||(g=='f'))
     {
-          bmr=655+(4.35*w)+(4.7*h)-(4.7*a);   //bmr formula for females
+          bmr=655+(4.35*w)+(4.7*h)-(4.7*a);   //bmr formula for females  
     }
     else if ((g=='M')||(g=='m'))
     {
         bmr=66+(6.23*w)+(12.7*h)-(6.8*a);   //bmr formula for males
     }
-    else if ((g!='M')&&(g!='m')&&(g!='F')&&(g!='f'))
+    else 
     {
         printf("Invalid Gender specified");
     }
-    return 0;
-
+    return bmr;
 }
