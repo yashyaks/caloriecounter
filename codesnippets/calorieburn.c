@@ -28,10 +28,7 @@ void main()
     }
 
 
-struct
-{
 
-}
 
 
 float bmr(float h,float w,float a,char g)
