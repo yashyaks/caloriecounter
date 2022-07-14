@@ -49,8 +49,7 @@ int main()
     {
         printf("Enter exercise name & duration for which it is performed");
         scanf("%s%f",s[i].name,&s[i].times);
-        if(s[i].name=="None")
-            break;
+
     }
     printf("Exercise name\tDuration\tCalories burnt\n");
     printf("---------------------------------------------------------------------\n");
@@ -71,13 +70,13 @@ int main()
 
         else if(s[i].name=="Walking")
         {
-             printf("%s\t\t%f\t\t%f\n",s[i].name,s[i].times,(((BMR*3.3)/(24*s[i].times)));
+             printf("%s\t\t%f\t\t%f\n",s[i].name,s[i].times,(((BMR*3.3)/(24*s[i].times))));
             s[i].answer=((BMR*3.3)/(24*s[i].times));
         }
 
         else if(s[i].name=="Calesthenics")
         {
-             printf("%s\t\t%f\t\t%f\n",s[i].name,s[i].times,((BMR*8.0)/(24*s[i].times)));
+            printf("%s\t\t%f\t\t%f\n",s[i].name,s[i].times,((BMR*8.0)/(24*s[i].times)));
             s[i].answer=((BMR*8.0)/(24*s[i].times));
         }
 
@@ -89,7 +88,7 @@ int main()
 
         else if(s[i].name=="Jogging")
         {
-             printf("%s\t\t%f\t\t%f\n",s[i].name,s[i].times,((BMR*7)/(24*s[i].times)));
+            printf("%s\t\t%f\t\t%f\n",s[i].name,s[i].times,((BMR*7)/(24*s[i].times)));
             s[i].answer=((BMR*7)/(24*s[i].times));
         }
 
@@ -116,18 +115,12 @@ int main()
             printf("%s\t\t%f\t\t%f\n",s[i].name,s[i].times,((BMR*3.3)/(24*s[i].times)));
             s[i].answer=((BMR*3.3)/(24*s[i].times));
         }
-
-
-
-    }
-    i=0;
-    while(i<n-1)
-    {
         sum=sum+s[i].answer;
-        i++;
+
+
     }
-    printf("%f",sum);
+
+    printf("You have burnt %f calories",sum);
  return(0);
 
 }
-
