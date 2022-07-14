@@ -58,32 +58,59 @@ int main()
     for(i=0;i<=n-1;i++)
     {
         if(s[i].name=="Swimming")
+        {
             printf("%s\t\t%f\t\t%f\n",s[i].name,s[i].times,((BMR*7)/(24*s[i].times)));
             s[i].answer=((BMR*7)/(24*s[i].times));
+        }
+
         else if(s[i].name=="Cycling")
+        {
             printf("%s\t\t%f\t\t%f\n",s[i].name,s[i].times,((BMR*5.5)/(24*s[i].times)));
             s[i].answer=((BMR*5.5)/(24*s[i].times));
+        }
+
         else if(s[i].name=="Walking")
-            printf("%s\t\t%f\t\t%f\n",s[i].name,s[i].times,(((BMR*3.3)/(24*s[i].times)));
+        {
+             printf("%s\t\t%f\t\t%f\n",s[i].name,s[i].times,(((BMR*3.3)/(24*s[i].times)));
             s[i].answer=((BMR*3.3)/(24*s[i].times));
+        }
+
         else if(s[i].name=="Calesthenics")
-            printf("%s\t\t%f\t\t%f\n",s[i].name,s[i].times,((BMR*8.0)/(24*s[i].times)));
+        {
+             printf("%s\t\t%f\t\t%f\n",s[i].name,s[i].times,((BMR*8.0)/(24*s[i].times)));
             s[i].answer=((BMR*8.0)/(24*s[i].times));
+        }
+
         else if(s[i].name=="Yoga")
+        {
             printf("%s\t\t%f\t\t%f\n",s[i].name,s[i].times,((BMR*3.0)/(24*s[i].times)));
             s[i].answer=((BMR*3.0)/(24*s[i].times));
+        }
+
         else if(s[i].name=="Jogging")
-            printf("%s\t\t%f\t\t%f\n",s[i].name,s[i].times,((BMR*7)/(24*s[i].times)));
+        {
+             printf("%s\t\t%f\t\t%f\n",s[i].name,s[i].times,((BMR*7)/(24*s[i].times)));
             s[i].answer=((BMR*7)/(24*s[i].times));
+        }
+
         else if(s[i].name=="Aerobics")
+        {
             printf("%s\t\t%f\t\t%f\n",s[i].name,s[i].times,((BMR*3.3)/(24*s[i].times)));
             s[i].answer=((BMR*3.3)/(24*s[i].times));
+        }
+
         else if(s[i].name=="Weight training")
+        {
             printf("%s\t\t%f\t\t%f\n",s[i].name,s[i].times,((BMR*3.3)/(24*s[i].times)));
             s[i].answer=((BMR*3.3)/(24*s[i].times));
+        }
+
         else if(s[i].name=="Running")
+        {
             printf("%s\t\t%f\t\t%f\n",s[i].name,s[i].times,((BMR*8)/(24*s[i].times)));
             s[i].answer=((BMR*8)/(24*s[i].times));
+        }
+
         else
         {
             printf("%s\t\t%f\t\t%f\n",s[i].name,s[i].times,((BMR*3.3)/(24*s[i].times)));
@@ -103,3 +130,4 @@ int main()
  return(0);
 
 }
+
