@@ -5,9 +5,9 @@
 struct excercise 
 {
 	int n;
-    char excercise[20];
+	char excercise[20];
 	float MET;
-}e[10];
+}e[100];
 
 
 float bmr(float h,float w,float a,char g)
