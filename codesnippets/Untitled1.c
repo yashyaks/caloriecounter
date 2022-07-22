@@ -31,7 +31,7 @@ float bmr(float h,float w,float a,char g,float bm)
 
 int main()
 {
-    int i=0,n,m;
+    int i=0,n,m,j,k;
     struct userinformation s[100];
     int number;
     float h,w,BMR,a,t,calburnt,sum=0,bm;
@@ -99,68 +99,66 @@ int main()
 
     }
     printf("How many of the following activities did you perform today?");
-    scanf("%d");
-
-    for(i=0;i<=n-1;i++)
-    {
-        printf("Enter exercise name & duration for which it is performed");
-        scanf("%f%s",s[i].name,s[i].times);
-
-    }
+    scanf("%d",&n);
     printf("Exercise name\tDuration\tCalories burnt\n");
     printf("--------------------------------------\n");
-     printf("-------------------------------------------\n");
+    printf("-------------------------------------------\n");
 
-
-    for(i=0;i<=n-1;i++)
+    for(j=0;j<=n-1;j++)
     {
-        if(s[i].name=e[0].exercise)
+        printf("Enter exercise name & duration for which it is performed");
+        scanf("%f%s",s[j].name,s[j].times);
+
+     for(j=k)
         {
-            printf("%s\t\t%f\t\t%f\n",s[i].name,s[i].times,((BMR*7)/(24*s[i].times)));
-            s[i].answer=((BMR*7)/(24*s[i].times));
+            if(s[j].name=e[0].exercise)
+            {
+                printf("%s\t\t%f\t\t%f\n",s[j].name,s[j].times,((BMR*7)/(24*s[j].times)));
+                s[j].answer=((BMR*7)/(24*s[j].times));
+            }
+
+            else if(s[j].name=e[1].exercise)
+            {
+                printf("%s\t\t%f\t\t%f\n",s[i].name,s[j].times,((BMR*5.5)/(24*s[j].times)));
+                s[j].answer=((BMR*5.5)/(24*s[j].times));
+            }
+
+            else if(s[j].name=e[2].exercise)
+            {
+                printf("%s\t\t%f\t\t%f\n",s[j].name,s[j].times,(((BMR*3.3)/(24*s[j].times))));
+                s[j].answer=((BMR*3.3)/(24*s[j].times));
+            }
+
+            else if(s[j].name=e[3].exercise)
+            {
+                printf("%s\t\t%f\t\t%f\n",s[j].name,s[j].times,((BMR*8.0)/(24*s[j].times)));
+                s[j].answer=((BMR*8.0)/(24*s[j].times));
+            }
+
+            else if(s[j].name=e[4].exercise)
+            {
+                printf("%s\t\t%f\t\t%f\n",s[j].name,s[j].times,((BMR*3.0)/(24*s[j].times)));
+                s[j].answer=((BMR*3.0)/(24*s[j].times));
+            }
+
+            else if(s[j].name=e[5].exercise)
+            {
+                printf("%s\t\t%f\t\t%f\n",s[j].name,s[j].times,((BMR*7)/(24*s[j].times)));
+                s[j].answer=((BMR*7)/(24*s[j].times));
+            }
+
+            else if(s[j].name=e[6].exercise)
+            {
+                printf("%s\t\t%f\t\t%f\n",s[j].name,s[j].times,((BMR*3.3)/(24*s[j].times)));
+                s[j].answer=((BMR*3.3)/(24*s[j].times));
+            }
+
+
+            sum=sum+s[j].answer;
+
+
         }
-
-        else if(s[i].name=e[1].exercise)
-        {
-            printf("%s\t\t%f\t\t%f\n",s[i].name,s[i].times,((BMR*5.5)/(24*s[i].times)));
-            s[i].answer=((BMR*5.5)/(24*s[i].times));
-        }
-
-        else if(s[i].name=e[2].exercise)
-        {
-             printf("%s\t\t%f\t\t%f\n",s[i].name,s[i].times,(((BMR*3.3)/(24*s[i].times))));
-            s[i].answer=((BMR*3.3)/(24*s[i].times));
-        }
-
-        else if(s[i].name=e[3].exercise)
-        {
-            printf("%s\t\t%f\t\t%f\n",s[i].name,s[i].times,((BMR*8.0)/(24*s[i].times)));
-            s[i].answer=((BMR*8.0)/(24*s[i].times));
-        }
-
-        else if(s[i].name=e[4].exercise)
-        {
-            printf("%s\t\t%f\t\t%f\n",s[i].name,s[i].times,((BMR*3.0)/(24*s[i].times)));
-            s[i].answer=((BMR*3.0)/(24*s[i].times));
-        }
-
-        else if(s[i].name=e[5].exercise)
-        {
-            printf("%s\t\t%f\t\t%f\n",s[i].name,s[i].times,((BMR*7)/(24*s[i].times)));
-            s[i].answer=((BMR*7)/(24*s[i].times));
-        }
-
-        else if(s[i].name=e[6].exercise)
-        {
-            printf("%s\t\t%f\t\t%f\n",s[i].name,s[i].times,((BMR*3.3)/(24*s[i].times)));
-            s[i].answer=((BMR*3.3)/(24*s[i].times));
-        }
-
-
-        sum=sum+s[i].answer;
-
-
-    }
+    }    
 
     printf("You have burnt %f calories",sum);
  return(0);
