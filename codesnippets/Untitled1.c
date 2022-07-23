@@ -3,14 +3,14 @@ struct excercise
 {
 	int m;
 	char exercise[20];
-}e[100];
+};
 
 struct userinformation
 {
     char name[10];
     float times;
     float answer;
-}s[100];
+};
 float bmr(float h,float w,float a,char g,float bm)
 {
     if ((g=='F')||(g=='f'))
@@ -32,8 +32,8 @@ float bmr(float h,float w,float a,char g,float bm)
 int main()
 {
     int i=0,n,m,j,k;
-    struct userinformation s[100];
     struct excercise e[100];
+    struct userinformation s[100];
     int number;
     float h,w,BMR,a,t,calburnt,sum=0,bm;
     char g;
@@ -48,12 +48,12 @@ int main()
     scanf("%c",&g);
     BMR=bmr(h,w,a,g,bm);
     printf("Your Basal Metabolic Rate(BMR) is %f",BMR);
-    e[0]={1,"Swimming"};
-    e[1]={2,"Cycling"};
-    e[2]={3,"Running"};
-    e[4]={4,"Weight Training"};
-    e[5]={5,"Walking"};
-    e[6]={6,"Jogging"};
+    struct excercise e[0]={1,"Swimming"};
+    struct excercise e[1]={2,"Cycling"};
+    struct excercise e[2]={3,"Running"};
+    struct excercise e[4]={4,"Weight Training"};
+    struct excercise e[5]={5,"Walking"};
+    struct excercise e[6]={6,"Jogging"};
     for(i=0;i<=6;i++)
         {
         printf("%d%s",e[i].m,e[i].exercise);
@@ -118,7 +118,7 @@ int main()
 
 
         }
-    }    
+    }
 
     printf("You have burnt %f calories",sum);
  return(0);
