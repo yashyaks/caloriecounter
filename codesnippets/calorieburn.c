@@ -3,10 +3,10 @@
 #include<stdlib.h>
 #include <time.h>
 
-struct excercise 
+struct excercise
 {
 	int n;
-    char excercise[20];
+	char excercise[20];
 	float MET;
 };
 struct userinputforexcercise
@@ -20,12 +20,12 @@ void delay(int number_of_seconds)
 {
     // Converting time into milli_seconds
     int milli_seconds=1000*number_of_seconds;
-  
+
     // Storing start time
     clock_t start_time = clock();
-    
+
     // looping till required time is not achieved
-    while (clock()<start_time+milli_seconds);    
+    while (clock()<start_time+milli_seconds);
 }
 
 float bmr(float h,float w,float a,char g)
@@ -70,7 +70,7 @@ void main()
         if((g!='F')&&(g!='f')&&(g!='M')&&(g!='m'))
         {
             printf("try again\n");
-            
+
         }
     } while((g!='F')&&(g!='f')&&(g!='M')&&(g!='m'));
     printf("Calculating");
@@ -80,7 +80,7 @@ void main()
         printf(".");
     }
     system("cls");
-    
+
     BMR=bmr(h,w,a,g);
     printf("Your Basal Metabolic Rate(BMR) is %f\n",BMR);
 
@@ -91,7 +91,7 @@ void main()
     {
         printf("%d]\t%s\t%f\n",e[i].n,e[i].excercise,e[i].MET);
     }
-    
+
     do
     {
         printf("What serial number of excercise performed? ");
@@ -102,10 +102,10 @@ void main()
             MET=input-1;
             printf("How many hours did you perform it for? ");
             scanf("%f",&ui[j].duration);
-            ui[j].calburnt=(BMR*e[MET].MET)/(24*ui[j].duration);
+            ui[j].calburnt=(e[MET].MET)*(BMR/24)*ui[j].duration;
             calburnt=calburnt+ui[j].calburnt;
             strcpy(ui[j].excercise,e[j].excercise);
-            
+
         }
         //printf("%f\n",ui[j].duration);
         //printf("%f\n",ui[j].calburnt);
@@ -125,7 +125,7 @@ void main()
 
     printf("Calorie Burn Report\n");
     printf("Exercise name\tDuration\tCalories burnt\n");
-    printf("---------------------------------------------------------------------\n");  
+    printf("---------------------------------------------------------------------\n");
     for(i=0;i<temp;i++)
     {
         printf("%s\t\t%f\t%f\n",ui[i].excercise,ui[i].duration,ui[i].calburnt);
@@ -136,4 +136,4 @@ void main()
 
 
 
-       
+
