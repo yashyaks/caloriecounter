@@ -1,3 +1,5 @@
+//DONT USE THIS FILE MAKE ALL CHANGES IN MAIN.C GOING AHEAD
+
 #include <stdio.h>
 #include <string.h>
 #include<stdlib.h>
@@ -176,7 +178,7 @@ back:
             Grandtotal = Grandtotal + totcal;
             printf("\nCalories consumed by eating Fried Rice = %d cal.\n", totcal);
             printf("Total amount of calories consumed = %d cal.\n\n", Grandtotal);
-            
+
         }
         else if (choice == 2)
         {
@@ -184,7 +186,7 @@ back:
             Grandtotal = Grandtotal + totcal;
             printf("\nCalories consumed by eating Jeera Rice = %d cal.\n", totcal);
             printf("Total amount of calories consumed = %d cal.\n\n", Grandtotal);
-            
+
         }
         else if (choice == 3)
         {
@@ -192,7 +194,7 @@ back:
             Grandtotal = Grandtotal + totcal;
             printf("\nCalories consumed by eating Veg Pulao = %d cal.\n", totcal);
             printf("Total amount of calories consumed = %d cal.\n\n", Grandtotal);
-          
+
         }
         else
             {
@@ -227,7 +229,7 @@ back:
             printf("Calories consumed by having okra = %d cal.\n", totcal);
             printf("Total amount of calories consumed = %d cal.\n\n", Grandtotal);
 
-            
+
         }
         else if (choice == 2)
         {
@@ -236,7 +238,7 @@ back:
             printf("Calories consumed by cabbage = %d cal.\n", totcal);
             printf("Total amount of calories consumed = %d cal.\n\n", Grandtotal);
 
-           
+
         }
         else if (choice == 3)
         {
@@ -245,7 +247,7 @@ back:
             printf("Calories consumed by Potatoes = %d cal.\n", totcal);
             printf("Total amount of calories consumed = %d cal.\n\n", Grandtotal);
 
-            
+
         }
         else
             printf("Invalid");
@@ -269,7 +271,7 @@ back:
             printf("\nCalories consumed by drinking Tea = %d cal.\n", totcal);
             printf("Total amount of calories consumed = %d cal.\n\n", Grandtotal);
 
-            
+
         }
         else if (choice == 2)
         {
@@ -294,7 +296,7 @@ back:
             printf("Calories consumed by eating Apples = %d cal.\n", totcal);
             printf("Total amount of calories consumed = %d cal.\n\n", Grandtotal);
 
-            
+
         }
         else if (choice == 2)
         {
@@ -303,7 +305,7 @@ back:
             printf("Calories consumed by eating Mangoes = %d cal.\n", totcal);
             printf("Total amount of calories consumed = %d cal.\n\n", Grandtotal);
 
-           
+
         }
         else if (choice == 3)
         {
@@ -312,7 +314,7 @@ back:
             printf("Calories consumed by eating Banana = %d cal.\n", totcal);
             printf("Total amount of calories consumed = %d cal.\n\n", Grandtotal);
 
-            
+
         }
         else
             printf("Invalid");
@@ -340,7 +342,7 @@ back:
         break;
         system("CLS");
     }
-    
+
     BMR=bmr(h,w,a,g,Bmr);
     printf("Your Basal Metabolic Rate(BMR) is %f",BMR);
     struct exercise e[]={{1,"Swimming",7},{2,"Cycling",5.5},{3,"Running",8},{4,"Jogging",7},{5,"Aerobics",3.3},{6,"Walking",3.3},{7,"Weight Training",3.3},{8,"Calesthenics",8},{9,"Yoga",3},{10,"Cross-fit",8}};
