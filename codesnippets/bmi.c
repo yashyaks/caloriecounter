@@ -1,6 +1,8 @@
-#include <stdio.h>
+//prototype code for BMI calculation
+//using function and analysis of result of users BMI
 
-int main() 
+#include <stdio.h>
+int main()
 {
     float BMI,h,w;
     float bmi(float,float);

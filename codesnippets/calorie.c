@@ -1,3 +1,5 @@
+//prototype code for calorie burn calculation
+
 #include<stdio.h>
 struct userinformation
 {

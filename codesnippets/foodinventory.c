@@ -1,3 +1,4 @@
+//prototype using for calorie source
 #include <stdio.h>
 #include <string.h>
 

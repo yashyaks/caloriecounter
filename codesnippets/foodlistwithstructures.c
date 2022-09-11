@@ -1,4 +1,4 @@
-//solution using structure
+//foodlist using structure
 #include<stdio.h>
 #include<string.h>
 struct fooditem
@@ -7,7 +7,7 @@ struct fooditem
     char name[10];
     int cal;
 }f[3];
-/*struct point 
+/*struct point
 {
     int x;
     char y;
@@ -18,7 +18,7 @@ void main()
     int i,servings,input,calorie,total=0;
 
 
-    struct fooditem f[3];                     
+    struct fooditem f[3];
     struct fooditem f0 = {1,"rice",30};
     *F0 = &f0;
     struct fooditem f1 = {2,"roti",50};
@@ -26,7 +26,7 @@ void main()
     struct fooditem f2 = {3,"done",0};
 
     /*struct fooditem *rice,f0;
-    rice = &f0; 
+    rice = &f0;
     printf("%d", &rice->cal);*/
 
     /*printf("%d]%s\t%d\n",f0.n,f0.name,f0.cal);              //1--->figure out a way to do this way more elegantly(this one works but dont wanna type this a thousand times)
@@ -46,8 +46,8 @@ void main()
         printf("What did you have?");
         scanf("%d",&input);
 
-        //calorie = F0->cal; 
-         //this has to be done using pointers figure out how(did this but still have to find a way to let it decide this on its own instead of switchcase or if else)                             
+        //calorie = F0->cal;
+         //this has to be done using pointers figure out how(did this but still have to find a way to let it decide this on its own instead of switchcase or if else)
         if(input!=3)
         {
             printf("how many servings did you have?");
@@ -71,7 +71,7 @@ struct fooditem
     char name[10];
     int cal;
 }f[3];
-/*struct point 
+/*struct point
 {
     int x;
     char y;
@@ -82,7 +82,7 @@ void main()
     int i,servings,input,calorie,total=0;
 
 
-    struct fooditem f[3];                     
+    struct fooditem f[3];
     struct fooditem f0 = {1,"rice",30};
     *F0 = &f0;
     struct fooditem f1 = {2,"roti",50};
@@ -90,7 +90,7 @@ void main()
     struct fooditem f2 = {3,"done",0};
 
     /*struct fooditem *rice,f0;
-    rice = &f0; 
+    rice = &f0;
     printf("%d", &rice->cal);*/
 
     /*printf("%d]%s\t%d\n",f0.n,f0.name,f0.cal);              //1--->figure out a way to do this way more elegantly(this one works but dont wanna type this a thousand times)
@@ -110,8 +110,8 @@ void main()
         printf("What did you have?");
         scanf("%d",&input);
 
-        //calorie = F0->cal; 
-         //this has to be done using pointers figure out how(did this but still have to find a way to let it decide this on its own instead of switchcase or if else)                             
+        //calorie = F0->cal;
+         //this has to be done using pointers figure out how(did this but still have to find a way to let it decide this on its own instead of switchcase or if else)
         if(input!=3)
         {
             printf("how many servings did you have?");

@@ -1,3 +1,8 @@
+//prototype code for calorie burn calculation
+//using structures for storing excercise data(yes there is a spelling mistake in all variables)
+//&making user report with user entered data
+
+
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>

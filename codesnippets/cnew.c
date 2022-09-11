@@ -1,3 +1,5 @@
+// calorie burn prototype code
+
 #include<stdio.h>
 #include<conio.h>
 int bmr(float h,float w,float a,char g)
@@ -5,13 +7,13 @@ int bmr(float h,float w,float a,char g)
     float bmr;
     if ((g=='F')||(g=='f'))
     {
-          bmr=447.593+(9.247*w)+(3.098*h)-(4.33*a);             //bmr formula for females  
+          bmr=447.593+(9.247*w)+(3.098*h)-(4.33*a);             //bmr formula for females
     }
     else if ((g=='M')||(g=='m'))
     {
         bmr=88.362+(13.397*w)+(4.799*h)-(5.677*a);               //bmr formula for males
     }
-    else 
+    else
     {
         printf("Invalid Gender specified");
     }
@@ -35,7 +37,7 @@ int main()
     scanf("%c",&g);
     BMR=bmr(h,w,a,g);
     printf("BMR=%f",BMR);
-    
+
 for(n=1;n<=3;n++)
 {
 printf("Enter time duration ");
@@ -54,7 +56,7 @@ case 1:
     calburnt=((BMR*3.3)/(24*t));
     printf("%f",calburnt);
     break;
-}    
+}
 case 2:
 {
 

@@ -1,6 +1,8 @@
+//prototype code for using array and switch case to
+//make lists of fooditems
+
 #include<stdio.h>
 #include<string.h>
-
 int main(){
     int cmp, y;
     char input[100];
@@ -12,12 +14,10 @@ int main(){
     printf("\nEnter an item");
     scanf("%s", input);
     for (int i = 0; i < 3; ++i)
-     {
-       
-    
-        
+    {
         cmp = strcmp(fooditems[i], input);
-        if(cmp==0){
+        if(cmp==0)
+        {
             y = i + 1;
         }
     }
@@ -26,7 +26,7 @@ int main(){
         printf("\nrice yess");
 
         break;
-        case 2: 
+        case 2:
         printf("\nroti yess");
         break;
         case 3:

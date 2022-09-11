@@ -1,3 +1,7 @@
+//prototype code for BMR calculation
+//using function used to customize calorie burn
+//based on users physical metrics
+
 #include <stdio.h>
 int main()
 {
@@ -23,15 +27,15 @@ int bmr(float h,float w,int a,char g)
     float bmr;
     if ((g=='F')||(g=='f'))
     {
-          bmr=655+(4.35*w)+(4.7*h)-(4.7*a);   //bmr formula for females  
+          bmr=655+(4.35*w)+(4.7*h)-(4.7*a);   //bmr formula for females
     }
     else if ((g=='M')||(g=='m'))
     {
         bmr=66+(6.23*w)+(12.7*h)-(6.8*a);   //bmr formula for males
     }
-    else 
+    else
     {
-        printf("Invalid Gender specified");
+        printf("Try again");
     }
     return bmr;
 }
