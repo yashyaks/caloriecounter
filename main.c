@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+
 float maintain, diff;
 float BMI, h, w, a, g;
 float bmi(float x, float y)
@@ -34,10 +35,11 @@ float bmr(float h, float w, float a, char g, float Bmr)
     }
     else
     {
-        printf("Invalid Gender specified");
+        printf("Try again");
     }
     return (Bmr);
 }
+
 int main()
 {
     int cmp, y, totcal = 0, servings, Grandtotal = 0, temp = 1, choice;
@@ -64,27 +66,36 @@ int main()
     printf("\t\t   `Y88P' YP   YP Y88888P  `Y88P'  `Y88P'  ~Y8888P' VP   V8P    YP    \n\n");
     printf("------------------------------------------------------------------------------------------------------------------\n\n");
     printf("To Create a new account\n");
-    printf("Please enter Your Name:\n");
+    printf("Please enter Your Name\n");
     scanf("%s", name);
-    printf("Enter your username:\n");
+    printf("Enter your username\n");
     scanf("%s", uid);
 passw:
-    printf("Enter a password (8 characters minimum):\n");
+    printf("Enter a password (8 characters minimum)\n");
     scanf("%s", pass);
     l = strlen(pass);
     if (l < 8)
     {
+        printf("Password should be a minimum of 8 character long\nTry again\n");
         goto passw;
     }
     else
     {
         system("CLS");
-        printf("------------------------------------------------------------------------------------------------------------------\n");
+        printf("------------------------------------------------------------------------------------------------------------------\n\n");
+        printf("\t\t   .o88b.  .d8b.  db       .o88b.  .d88b.  db    db d8b   db d888888b \n");
+        printf("\t\t  d8P  Y8 d8' `8b 88      d8P  Y8 .8P  Y8. 88    88 888o  88 `~~88~~' \n");
+        printf("\t\t  8P      88ooo88 88      8P      88    88 88    88 88V8o 88    88    \n");
+        printf("\t\t  8b      88~~~88 88      8b      88    88 88    88 88 V8o88    88    \n");
+        printf("\t\t  Y8b  d8 88   88 88booo. Y8b  d8 `8b  d8' 88b  d88 88  V888    88    \n");
+        printf("\t\t   `Y88P' YP   YP Y88888P  `Y88P'  `Y88P'  ~Y8888P' VP   V8P    YP    \n\n");
+        printf("------------------------------------------------------------------------------------------------------------------\n\n");
+
         printf("\nHello %s!\n\n", name);
-        printf("To login:\n");
+        printf("To login,\n");
     }
 uidg:
-    printf("Enter your username:\n");
+    printf("Enter your username\n");
     _flushall();
     gets(copyuid);
 
@@ -95,38 +106,80 @@ uidg:
         gets(copypass);
         if ((strcmp(pass, copypass)) == 0)
         {
-            printf("\n*WELCOME TO THE PAGE*\n\n");
+            printf("\n*WELCOME TO CALCOUNT*\npress enter to continue");
         }
         else
         {
-            printf("Please enter the right password: \n");
+            printf("Incorrect username, Try again\n");
             goto passg;
         }
     }
     else
+    {
+        printf("Incorrect username, Try again\n");
         goto uidg;
-    printf(" Please enter your Height in centimetres:\n");
+    }
+    getchar();
+    system("CLS");
+    printf("\nHello %s!\n\n", name);
+    printf("Please enter your Height in centimeters: ");
     scanf("%f", &h);
-    printf("Please enter your Weight in Kilograms:\n");
+    printf("Please enter your Weight in Kilograms: ");
     scanf("%f", &w);
-    printf("Please enter your  Age in Years:\n");
+    printf("Please enter your  Age in Years: ");
     scanf("%f", &a);
-    printf("Please enter your Gender (Male or Female):\n");
+    printf("Please enter your Gender (M or F): ");
     _flushall();
     scanf("%c", &g);
-    printf("------------------------------------------------------------\n");
+
     BMI = bmi(h, w);
+    printf("------------------------------------------------------------\n");
     if (BMI <= 18.4)
         printf("\nYour BMI is %f and you are underweight.\n\n", BMI);
     else if (BMI >= 18.5 && BMI <= 24.9)
-        printf("\nYour BMI is %f and you are normal.\n\n", BMI);
+        printf("\nYour BMI is %f and you have a normal weight.\n\n", BMI);
     else if (BMI >= 25.0 && BMI <= 39.9)
         printf("\nYour BMI is %f and you are overweight.\n\n", BMI);
     else if (BMI >= 40.0)
         printf("\nYour BMI is %f and you are obese.\n\n", BMI);
 
     printf("-----------------------------------------------------------\n");
-    printf("To count the amount of calories you have eaten-->\n ");
+    BMR = bmr(h, w, a, g, Bmr);
+    printf("------------------------------------------------------------\n");
+    printf("\nYour Basal Metabolic Rate (BMR) is: %f\n", BMR);
+    printf("------------------------------------------------------------\n\n");
+    printf("Press enter to continue");
+    _flushall();
+    getchar();
+    system("CLS");
+    _flushall();
+    printf("Your entered height is: %f\n",h);
+    printf("Your entered weight is: %f\n",w);
+    printf("Your entered age is: %f\n",a);
+    if ((g == 'F') || (g == 'f'))
+    {
+        printf("Your entered gender is: Female\n");
+    }
+    else if ((g == 'M') || (g == 'm'))
+    {
+        printf("Your entered gender is: Male\n");
+    }
+    printf("------------------------------------------------------------\n");
+    if (BMI <= 18.4)
+        printf("\nYour BMI is %f and you are underweight.\n\n", BMI);
+    else if (BMI >= 18.5 && BMI <= 24.9)
+        printf("\nYour BMI is %f and you have a normal weight.\n\n", BMI);
+    else if (BMI >= 25.0 && BMI <= 39.9)
+        printf("\nYour BMI is %f and you are overweight.\n\n", BMI);
+    else if (BMI >= 40.0)
+        printf("\nYour BMI is %f and you are obese.\n\n", BMI);
+    printf("-----------------------------------------------------------\n");
+
+    printf("------------------------------------------------------------\n");
+    printf("\nYour Basal Metabolic Rate (BMR) is: %f\n", BMR);
+    printf("------------------------------------------------------------\n\n");
+
+    printf("To count the amount of calories you have eaten,\n ");
     printf("Choose from the following food items:\n");
     for (int i = 0; i <= 10; i++)
     {
@@ -135,7 +188,7 @@ uidg:
 
 again:
 
-    printf("\nEnter the food item you have eaten:\n");
+    printf("\nEnter the food item you have eaten: ");
     scanf("%s", input);
     goto back;
 
@@ -149,7 +202,7 @@ back:
     }
     if (temp == 1)
     {
-        printf("Enter the number of servings:\n");
+        printf("Enter the number of servings: ");
         scanf("%d", &servings);
     }
     for (int i = 0; i <= 10; ++i)
@@ -164,7 +217,7 @@ back:
     switch (y)
     {
     case 1: //  Rice
-        printf("Which of the following type of Rice did you eat : \n1) Fried Rice\n2) Jeera Rice\n3) Veg Pulao \nYour Choice = ");
+        printf("Which of the following type of Rice did you eat:\n1) Fried Rice\n2) Jeera Rice\n3) Veg Pulao \nYour Choice = ");
         scanf("%d", &choice);
         if (choice == 1)
         {
@@ -211,7 +264,7 @@ back:
 
     case 4: // Vegetables
 
-        printf("Which of the following Vegetables did you eat \n1) Okra\n2) Cabbage\n3) Potatoes\nYour Choice = ");
+        printf("Which of the following Vegetables did you eat:\n1) Okra\n2) Cabbage\n3) Potatoes\nYour Choice = ");
         scanf("%d", &choice);
         if (choice == 1)
         {
@@ -318,11 +371,34 @@ back:
         break;
         system("CLS");
     }
-
-    BMR = bmr(h, w, a, g, Bmr);
+    system("CLS");
+    printf("Your entered height is: %f\n",h);
+    printf("Your entered weight is: %f\n",w);
+    printf("Your entered age is: %f\n",a);
+    if ((g == 'F') || (g == 'f'))
+    {
+        printf("Your entered gender is: Female\n");
+    }
+    else if ((g == 'M') || (g == 'm'))
+    {
+        printf("Your entered gender is: Male\n");
+    }
     printf("------------------------------------------------------------\n");
-    printf("\nYour Basal Metabolic Rate (BMR) is:\n%f\n", BMR);
+    if (BMI <= 18.4)
+        printf("\nYour BMI is %f and you are underweight.\n\n", BMI);
+    else if (BMI >= 18.5 && BMI <= 24.9)
+        printf("\nYour BMI is %f and you have a normal weight.\n\n", BMI);
+    else if (BMI >= 25.0 && BMI <= 39.9)
+        printf("\nYour BMI is %f and you are overweight.\n\n", BMI);
+    else if (BMI >= 40.0)
+        printf("\nYour BMI is %f and you are obese.\n\n", BMI);
+    printf("-----------------------------------------------------------\n");
+
+    printf("------------------------------------------------------------\n");
+    printf("\nYour Basal Metabolic Rate (BMR) is: %f\n", BMR);
     printf("------------------------------------------------------------\n\n");
+    printf("To calculate calorie burn,\n ");
+    printf("Select the exercise you have performed from the following:\n");
 
     struct exercise e[] = {{1, "Swimming", 7}, {2, "Cycling", 5.5}, {3, "Running", 8}, {4, "Jogging", 7}, {5, "Aerobics", 3.3}, {6, "Walking", 3.3}, {7, "Weight Training", 3.3}, {8, "Calesthenics", 8}, {9, "Yoga", 3}, {10, "Cross-fit", 8}};
     for (int i = 0; i <= 8; i++)
@@ -330,7 +406,7 @@ back:
         printf("%d] %s", e[i].m, e[i].exc);
         printf("\n");
     }
-    printf("How many of the following exercises did you perform?\n");
+    printf("How many of the following exercises did you perform? ");
     scanf("%d", &n);
     for (int i = 0; i <= n - 1; i++)
     {
@@ -338,6 +414,7 @@ back:
         printf("Enter exercise name & duration (in hours) for each exercise performed:\n");
         scanf("%s%f", &s[i].name, &s[i].times);
     }
+    printf("\nCalorie Burn Report\n");
     printf("Exercise name\tDuration(hrs)\t Calories burnt\n");
     printf("--------------------------------------------------------\n");
 
@@ -403,12 +480,26 @@ back:
 
         sum = sum + s[i].answer;
     }
-
-    printf("\n\nYou have burnt %f calories in total!!", sum);
+    _flushall();
+    printf("Press enter to continue");
+    getchar();
+    system("CLS");
+    printf("------------------------------------------------------------------------------------------------------------------\n\n");
+    printf("\t\t   .o88b.  .d8b.  db       .o88b.  .d88b.  db    db d8b   db d888888b \n");
+    printf("\t\t  d8P  Y8 d8' `8b 88      d8P  Y8 .8P  Y8. 88    88 888o  88 `~~88~~' \n");
+    printf("\t\t  8P      88ooo88 88      8P      88    88 88    88 88V8o 88    88    \n");
+    printf("\t\t  8b      88~~~88 88      8b      88    88 88    88 88 V8o88    88    \n");
+    printf("\t\t  Y8b  d8 88   88 88booo. Y8b  d8 `8b  d8' 88b  d88 88  V888    88    \n");
+    printf("\t\t   `Y88P' YP   YP Y88888P  `Y88P'  `Y88P'  ~Y8888P' VP   V8P    YP    \n\n");
+    printf("------------------------------------------------------------------------------------------------------------------\n\n");
+    printf("Final calorie Analysis\n");
+    printf("------------------------------------------------------------------------------------------------------------------\n\n");
+    printf("Total amount of calories consumed = %d cal.\n\n", Grandtotal);
+    printf("Hurray!! You have burnt %f calories in total.\n\n", sum);
     cod = Grandtotal - sum;
     maintain = BMR * 1.2;
     diff = maintain - cod;
-    printf("\n\n The amount of calories you have counsumed after the workout is : %f cal. \n\n", cod);
+    printf("Your net after the workout is : %f cal. \n\n", cod);
     printf("Your maintenance calories are : %f cal.\n\n", maintain);
     if (diff > 50)
     {
@@ -419,11 +510,10 @@ back:
         printf("You need to BURN %f calories.\n\n", cod - maintain);
     }
     else if (cod = maintain)
-        printf("Your goal has been ACHIEVED!!\n\n HURRRAYYYY!!!!!\n\n\n");
-    printf("Thank you for using our application :D\n\n");
-    printf(" Project by:Aryann Tated\n Hiya Jain\n Bhuvi Ghosh\n Yash Thakar");
-    printf(" ");
-    system("pause");
+        printf("Your goal has been ACHIEVED!!\n\n HURRRAYYYY!!!!!\n\n");
+    printf("Thank you for using our application :D\n");
+    printf("Project by: Aryann Tated\t Hiya Jain\t Bhuvi Ghosh\t Yash Thakar\n");
+    printf("press any key to exit");
     getchar();
     return 0;
 }
