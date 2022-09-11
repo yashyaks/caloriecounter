@@ -1,14 +1,24 @@
 # Calorie Counter
 
-A program that maintains counts of calorie intake and burns and values on a daily basis.
+A program that maintains counts of calorie intake and burns and values on a daily basis.  
+
+![Lines of code](https://img.shields.io/tokei/lines/GITHUB/YASHYAKS/caloriecounter)  ![GitHub Repo stars](https://img.shields.io/github/stars/yashyaks/caloriecounter?style=social)
+
+## Usage
+
+The program needs to be compiled to be used. Here are the steps to do it
+- Downlaod the main.c file, it is the source code.
+- Compile it and run the program.
+
+We recommend using the ming-w compiler to compile the code.  
+Ming-w compiler can be easily used with the [codeblocks](http://www.codeblocks.org/downloads/binaries/) IDE. 
 
 ## Collaborators
 
-- [@aryanntated](https://github.com/aryanntated)
-- [@bhuvighosh3](https://github.com/bhuvighosh3)
-- [@HiyaJain22](https://github.com/HiyaJain22)
-- [@yashyaks](https://github.com/yashyaks)
-
+- ![GitHub followers](https://img.shields.io/github/followers/aryanntated?label=aryanntated&style=social)
+- ![GitHub followers](https://img.shields.io/github/followers/bhuvighosh3?label=bhuvighosh3&style=social)
+- ![GitHub followers](https://img.shields.io/github/followers/HiyaJain22?label=HiyaJain22&style=social)
+- ![GitHub followers](https://img.shields.io/github/followers/yashyaks?label=yashyaks&style=social)
 
 
 ## Screenshots
