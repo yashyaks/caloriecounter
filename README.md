@@ -1,4 +1,4 @@
-# Calorie Counter
+# CalCount
 
 A program that maintains counts of calorie intake and burns and values on a daily basis.  
 
